@@ -1,0 +1,38 @@
+nombreH=input()
+nombreM=input()
+cantidadH=[]
+cantidadM=[]
+contador=0
+vocaleshombre=0
+vocalesmujer=0
+vocales=("A","E","I","O","U","a","e","i","o","u")
+letras=("L","O","V","E")
+suma=0
+
+for z in nombreH:
+    cantidadH.append(z)
+for r in nombreM:
+    cantidadM.append(r)
+
+for i in nombreH:
+    if i in vocales:
+        vocaleshombre=vocaleshombre+1
+for y in nombreM:
+    if y in vocales:
+        vocalesmujer=vocalesmujer+1
+if vocaleshombre==vocalesmujer:
+    contador=contador+5
+
+if len(nombreH) and len(nombreM) >= 7:
+    contador=contador+2
+
+if cantidadH[0] in letras:
+    suma=suma+1
+
+if cantidadM[0] in letras:
+    suma=suma+1
+
+if suma==2:
+    contador = contador+3
+
+print(contador)
